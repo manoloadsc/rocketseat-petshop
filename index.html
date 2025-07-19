@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo Pet - Agenda</title>
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/variables.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <div class="container-header">
+      <header class="header">
+        <div class="logo">
+          <span class="icon">🐾</span>
+          <span class="brand">Mundo Pet</span>
+        </div>
+      </header>
+    </div>
+
+    <main class="container">
+      <section class="agenda">
+        <div class="header-2">
+          <div>
+            <h1 class="title">Sua agenda</h1>
+            <p class="subtitle">
+              Aqui você pode ver todos os clientes e serviços agendados para
+              hoje.
+            </p>
+          </div>
+
+          <input
+            class="date-picker"
+            type="date"
+            id="agenda-date"
+            value="2024-01-10"
+          />
+        </div>
+
+        <div class="new-appointment">
+          <button class="new-appointment-button">Novo Agendamento</button>
+        </div>
+
+        <div class="period" id="period-morning">
+          <h2>
+            <span class="emoji">🌤️</span> Manhã
+            <span class="hour">09h-12h</span>
+          </h2>
+          <ul>
+            <li>
+              <div class="appointment">
+                <strong>13:00</strong>
+                <p>Mel / João Souza</p>
+                <span class="service">Corte de Unhas</span>
+              </div>
+              <button class="delete-btn">
+                <img class="icon-trash" src="./src/assets/trash.svg" alt="Excluir" />
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="period" id="period-afternoon">
+          <h2>
+            <span class="emoji">🌞</span> Tarde
+            <span class="hour">13h-18h</span>
+          </h2>
+          <ul>
+            <li>
+              <div class="appointment">
+                <strong>13:00</strong>
+                <p>Mel / João Souza</p>
+                <span class="service">Corte de Unhas</span>
+              </div>
+              <button class="delete-btn">
+                <img
+                  class="icon-trash"
+                  src="./src/assets/trash.svg"
+                  alt="Excluir"
+                />
+              </button>
+            </li>
+            <li>
+              <div class="appointment">
+                <strong>13:00</strong>
+                <p>Mel / João Souza</p>
+                <span class="service">Corte de Unhas</span>
+              </div>
+              <button class="delete-btn">
+                <img
+                  class="icon-trash"
+                  src="./src/assets/trash.svg"
+                  alt="Excluir"
+                />
+              </button>
+            </li>
+            <li>
+              <div class="appointment">
+                <strong>13:00</strong>
+                <p>Mel / João Souza</p>
+                <span class="service">Corte de Unhas</span>
+              </div>
+              <button class="delete-btn">
+                <img
+                  class="icon-trash"
+                  src="./src/assets/trash.svg"
+                  alt="Excluir"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="period" id="period-night">
+          <h2>
+            <span class="emoji">🌙</span> Noite
+            <span class="hour">19h-21h</span>
+          </h2>
+          <ul>
+            <li>
+              <div class="appointment">
+                <strong>13:00</strong>
+                <p>Mel / João Souza</p>
+                <span class="service">Corte de Unhas</span>
+              </div>
+              <button class="delete-btn">
+                <img class="icon-trash" src="./src/assets/trash.svg" alt="Excluir" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal (será ativado via JS) -->
+    <!--
+    <div class="modal hidden" id="appointment-modal">
+      <div class="modal-content">
+        <h2>Agende um atendimento</h2>
+        <p>Preencha os dados do cliente para realizar o agendamento:</p>
+
+        <form class="form">
+          <label>Nome do tutor</label>
+          <input type="text" placeholder="Ex: Helena Souza" />
+
+          <label>Nome do pet</label>
+          <input type="text" placeholder="Ex: Cheddar" />
+
+          <label>Telefone</label>
+          <input type="tel" placeholder="(00) 0 0000-0000" />
+
+          <label>Descrição do serviço</label>
+          <textarea placeholder="Ex: Banho e tosa"></textarea>
+
+          <div class="form-group-inline">
+            <div>
+              <label>Data</label>
+              <input type="date" />
+            </div>
+            <div>
+              <label>Hora</label>
+              <select class="hour" name="hour" id="hour">
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Agendar</button>
+        </form>
+      </div>
+    </div>
+    -->
+  </body>
+</html>

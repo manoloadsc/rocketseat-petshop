@@ -1,0 +1,18 @@
+/* reset.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+  }
+  
+  button, input, textarea {
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  

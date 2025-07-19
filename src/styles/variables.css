@@ -1,0 +1,33 @@
+/* variables.css */
+:root {
+    --gray-900: #111014;
+    --gray-800: #1C1B20;
+    --gray-700: #2A2933;
+    --gray-400: #9E9BAF;
+    --white: #ffffff;
+  
+    --purple: #A881E6;
+    --purple-light: #BCA5F5;
+    --purple-dark: #8854D0;
+  
+    --blue-icon: #3F8CFF;
+    --orange-icon: #DB7C26;
+    --yellow-icon: #E5C94B;
+  
+    --font-title: 600 1.5rem/140% 'Inter', sans-serif;
+    --font-body: 400 1rem/160% 'Inter', sans-serif;
+  }
+  
+
+  :root {
+    --gray-900: #0d0d0d;
+    --gray-800: #1c1c1f;
+    --gray-700: #2a2a2e;
+    --gray-500: #8a8a91;
+    --gray-400: #b0b0b9;
+    --white: #ffffff;
+  
+    --primary: #8b5cf6; /* Roxo */
+    --primary-dark: #7c3aed;
+  }
+  

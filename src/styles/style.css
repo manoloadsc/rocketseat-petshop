@@ -1,0 +1,287 @@
+/* style.css */
+body {
+  background-color: var(--gray-900);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  padding: 2rem;
+}
+
+.container-header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: var(--gray-800);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.brand {
+  color: var(--purple);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.agenda .title {
+  font: var(--font-title);
+  margin-bottom: 0.25rem;
+}
+
+.agenda .subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: 1.5rem;
+}
+
+.date-picker {
+  background-color: var(--gray-800);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: fit-content;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-700);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.date-picker input [type="date"] {
+  filter: invert(1); /* inverte as cores, útil para deixar o ícone branco */
+}
+
+.period {
+  background: var(--gray-800);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.period h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-700);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.appointment {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.icon-trash {
+  width: 25px;
+  cursor: pointer;
+}
+
+
+#period-morning h2 .emoji {
+  color: var(--blue-icon);
+}
+
+#period-afternoon h2 .emoji {
+  color: var(--orange-icon);
+}
+
+#period-night h2 .emoji {
+  color: var(--yellow-icon);
+}
+
+.period ul {
+  padding: 1rem;
+}
+
+.period ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.period ul li:last-child {
+  border: none;
+}
+
+.period ul li strong {
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.service {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  display: block;
+  margin-left: 2.75rem;
+}
+
+.new-appointment-button {
+  background: var(--purple);
+  color: var(--gray-900);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 1rem rgba(168, 129, 230, 0.4);
+  transition: background 0.2s ease;
+  width: 100%;
+  margin-left: auto;
+}
+
+.new-appointment {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.new-appointment-button:hover {
+  background: var(--purple-dark);
+}
+
+/* Modal está comentado no HTML, será ativado via JavaScript futuramente */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.hidden {
+  /* display: none; */
+}
+
+.modal-content {
+  background-color: var(--gray-900);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  color: var(--white);
+  box-shadow: 0 0 0 1px var(--gray-700);
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--gray-800);
+  border: 1px solid var(--gray-700);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 0.875rem;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--gray-500);
+}
+
+.form textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group-inline > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hour {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--gray-800);
+  border: 1px solid var(--gray-700);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 0.875rem;
+}
+
+.submit-button {
+  margin-top: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-dark);
+}
