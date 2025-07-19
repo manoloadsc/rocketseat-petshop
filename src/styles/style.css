@@ -191,10 +191,24 @@ body {
 }
 
 .hidden {
-  /* display: none; */
+  display: none;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 80%;
+}
+
+.modal-close-button img {
+  width: 20px;
+  cursor: pointer;
+  filter: invert(1);
 }
 
 .modal-content {
+  position: relative;
   background-color: var(--gray-900);
   border-radius: 1rem;
   padding: 2rem;
@@ -263,11 +277,12 @@ body {
 .hour {
   width: 100%;
   padding: 0.75rem 1rem;
+  color: var(--white);
+  font-size: 0.875rem;
+  text-align: start;
   background-color: var(--gray-800);
   border: 1px solid var(--gray-700);
   border-radius: 0.5rem;
-  color: var(--white);
-  font-size: 0.875rem;
 }
 
 .submit-button {

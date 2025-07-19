@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundo Pet - Agenda</title>
-    <link rel="stylesheet" href="src/styles/reset.css" />
-    <link rel="stylesheet" href="src/styles/variables.css" />
-    <link rel="stylesheet" href="src/styles/style.css" />
   </head>
   <body>
     <div class="container-header">
@@ -33,18 +30,18 @@
             class="date-picker"
             type="date"
             id="agenda-date"
-            value="2024-01-10"
+            placeholder="Selecione uma data"
           />
         </div>
 
         <div class="new-appointment">
-          <button class="new-appointment-button">Novo Agendamento</button>
+          <button id="new-appointment-button" class="new-appointment-button">Novo Agendamento</button>
         </div>
 
         <div class="period" id="period-morning">
           <h2>
             <span class="emoji">🌤️</span> Manhã
-            <span class="hour">09h-12h</span>
+            <span class="hour-period">09h-12h</span>
           </h2>
           <ul>
             <li>
@@ -63,7 +60,7 @@
         <div class="period" id="period-afternoon">
           <h2>
             <span class="emoji">🌞</span> Tarde
-            <span class="hour">13h-18h</span>
+            <span class="hour-period">13h-18h</span>
           </h2>
           <ul>
             <li>
@@ -114,7 +111,7 @@
         <div class="period" id="period-night">
           <h2>
             <span class="emoji">🌙</span> Noite
-            <span class="hour">19h-21h</span>
+            <span class="hour-period">19h-21h</span>
           </h2>
           <ul>
             <li>
@@ -133,9 +130,13 @@
     </main>
 
     <!-- Modal (será ativado via JS) -->
-    <!--
+    
     <div class="modal hidden" id="appointment-modal">
       <div class="modal-content">
+        <button id="modal-close-button" class="modal-close-button">
+          <img src="./src/assets/close.svg" alt="Fechar" />
+        </button>
+
         <h2>Agende um atendimento</h2>
         <p>Preencha os dados do cliente para realizar o agendamento:</p>
 
@@ -180,6 +181,6 @@
         </form>
       </div>
     </div>
-    -->
+
   </body>
 </html>
