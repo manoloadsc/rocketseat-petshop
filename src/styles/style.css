@@ -108,6 +108,27 @@ body {
   width: 70%;
 }
 
+.hour-schedule {
+    margin-right: 1rem;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+ul {
+    padding: 200px;
+}
+
 .icon-trash {
   width: 25px;
   cursor: pointer;
