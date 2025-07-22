@@ -10,4 +10,6 @@ import "./libs/dayjs.js";
 
 // Configuração do JS
 import "./modules/initial/initial.js";
+import "./modules/form/date-change.js";
+
 
