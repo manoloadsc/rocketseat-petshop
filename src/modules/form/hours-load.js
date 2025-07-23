@@ -4,21 +4,26 @@ import { openingHours } from "../../utils/opening-hours.js";
 // Renderizar os horários no select
 const selectHour = document.getElementById("hour");
 
-export function setupHoursLoad({date}) {
+export function setupHoursLoad({date, dailySchedules}) {
     
     // Limpa a lista de horários
-    selectHour.innerHTML = ""
+    selectHour.innerHTML = "";
+
+     // Obtem as horas com a datas indisponiveis
+     const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"))
 
     // Buscar os horários disponíveis no select
     const openingHour = openingHours.map((hour) => {
         // Recupera somente a hora
         const [scheduleHour] = hour.split(":");
 
-        const isHourPast = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs());
+        const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs());
+
+        const available = !unavailableHours.includes(hour) && !isHourPast;
 
         return {
             hour,
-            available: isHourPast
+            available
         }
     })
 

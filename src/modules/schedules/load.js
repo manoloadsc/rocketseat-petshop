@@ -2,19 +2,17 @@ import { setupHoursLoad } from "../form/hours-load.js";
 import { scheduleFetchByDay } from "../../service/schedule-fetch-by-day.js";
 import { setupSchedulesShow } from "./show.js";
 
-const selectDate = document.getElementById("appointment-date");
+const selectDateForm = document.getElementById("appointment-date");
 
 export async function setupSchedules() {
-    const date = selectDate.value;
-    
-    // Renderizar as horas disponíveis
-    setupHoursLoad({date});
+    const date = selectDateForm.value;
 
     // Buscar na API os agendamentos do dia selecionado
     const dailySchedules = await scheduleFetchByDay({date});
 
+    // Renderizar as horas disponíveis
+    setupHoursLoad({date, dailySchedules});
+
     // Exibe os agendamentos
     setupSchedulesShow({dailySchedules});
-
-    // Buscar os horários disponíveis no select (horário futuro + não agendado) 
 }

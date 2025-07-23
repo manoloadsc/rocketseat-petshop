@@ -11,5 +11,6 @@ import "./libs/dayjs.js";
 // Configuração do JS
 import "./modules/initial/initial.js";
 import "./modules/form/date-change.js";
+import "./modules/schedules/cancel.js";
 
 

@@ -6,12 +6,11 @@ const selectedDate = document.getElementById("agenda-date");
 
 // Recarrega a lista de horarios ao mudar de data
 selectedDateForm.onchange = () => {
+    selectedDate.value = selectedDateForm.value; // Sincroniza os campos
     setupSchedules();
-    console.log(selectedDateForm.value);
 };
 
-// Recarrega a lista de horarios ao mudar de data
 selectedDate.onchange = () => {
+    selectedDateForm.value = selectedDate.value; // Sincroniza os campos
     setupSchedules();
-    console.log(selectedDate.value);
 };

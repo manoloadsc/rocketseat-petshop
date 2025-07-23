@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import { clientNew } from "../../service/client-new.js";
 import { scheduleNew } from "../../service/schedule-new.js";
+import { setupSchedules } from "../schedules/load.js";
 
 // Recuperando o form
 const form = document.querySelector("form");
@@ -81,6 +82,19 @@ export function setupForm() {
 
       await scheduleNew({ id, name, pet, phone, service, when });
       await clientNew({ id, name, phone, pet });
+
+      // Recarrega a lista de agendamentos
+      await setupSchedules();
+
+      // Limpa o form
+      nameClient.value = "";
+      petClient.value = "";
+      phoneClient.value = "";
+      serviceClient.value = "";
+
+      // Fecha o modal
+      const modal = document.getElementById("appointment-modal");
+      modal.classList.add("hidden");
       
     } catch (error) {
       console.log(error);
